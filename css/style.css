@@ -1,0 +1,425 @@
+/* Hoja de estilos principal */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* General styles */
+html {
+  font-size: 100%;
+}
+body {
+  background: hsl(36, 100%, 99%)
+}
+.home {
+  width: 100vw;
+  height: 100vh;
+}
+.home #page {
+  width: 78vw;
+  height: 84vh;
+  display: grid;
+  grid-template-rows: 9% 65% 26%;
+  grid-template-columns: 63% 34%;
+  grid-column-gap: 3%;
+  font-family: 'Inter', sans-serif;
+  padding: 8vh 11vw;
+}
+/* Home page header */
+.home .masthead{
+  grid-column: 1/3;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+.masthead .logo {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  width: 4.5%;
+  align-self: top;
+}
+/* Menu de navegacion */
+.main-navigation {
+  display: block;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  justify-self: end;
+  align-self: top;
+  margin-top: 2%;
+}
+.main-navigation .navigation-item {
+  font-size:  calc(0.4em + 1vw);
+  text-decoration: none;
+  line-height: 1.2;
+  background: transparent;
+  padding: 2px 10px;
+  color: hsl(236, 13%, 42%);
+}
+.main-navigation .navigation-item:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
+}
+.grid-container {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  align-self: stretch;
+  justify-self: stretch;
+  display: grid;
+  grid-template-rows: 52% 30% 10%;
+  grid-template-columns: 52% 48%;
+  grid-row-gap: 4%;
+}
+.grid-container .entry-thumbnail {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    justify-self: stretch;
+    align-self: stretch;
+}
+.grid-container .entry-title {
+  grid-column: 1/2;
+  grid-row: 2/4;
+  font-weight: 800;
+  font-size:  calc(2.3em + 1vw);
+  letter-spacing: 1px;
+  line-height: 1.05;
+  align-self: center;
+  justify-self: start;
+  width: 90%;
+  color: hsl(240, 100%, 5%);
+}
+.grid-container .entry-summary {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-weight: 400;
+    font-size:  calc(0.1em + 1vw);
+    line-height: 1.5;
+    align-self: center;
+    justify-self: start;
+    color: hsl(236, 13%, 42%);
+    width: 98%;
+}
+.grid-container .entry-button {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: hsl(36, 100%, 99%);
+  background-color: hsl(5, 85%, 63%);
+  font-weight: 400;
+  font-size:  calc(0.15em + 1vw);
+  border: 0px;
+  width: 55%;
+  height: 100%;
+  align-self: end;
+}
+.grid-container .entry-button:hover {
+  cursor: pointer;
+  background-color: hsl(240, 100%, 5%);
+}
+
+/* Aside lateral */
+.entry-new {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: hsl(240, 100%, 5%);
+  display: grid;
+  grid-template-rows: 6% 30% 30% 30%;
+  grid-row-gap: 1%;
+  padding: 7% 5% 0% 5%;
+}
+.entry-new .aside-title {
+  color: hsl(35, 77%, 62%);
+  font-weight: 700;
+  font-size:  calc(1em + 1vw);
+}
+.entry-new .grid-item{
+  border-bottom:1px solid hsl(233, 8%, 79%);
+  align-self: stretch;
+  justify-self: start;
+  display: grid;
+  grid-row: 30% 60%;
+}
+.entry-new .entry-title {
+  color: hsl(36, 100%, 99%);
+  font-weight: 400;
+  font-size:  calc(0.4em + 1vw);
+  margin-bottom: 5%;
+  align-self: end;
+  justify-self: start;
+}
+.entry-new .entry-title:hover {
+  cursor: pointer;
+  color: hsl(35, 77%, 62%);
+}
+.entry-new .entry-summary {
+  color: hsl(233, 8%, 79%);
+  font-weight: 400;
+  font-size:  calc(0.15em + 1vw);
+  line-height: 1.5;
+  align-self: top;
+  justify-self: center;
+}
+
+/* Elementos relacionados */
+.entry-related {
+  grid-column: 1/3;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  grid-column-gap: 1%;
+  align-self: center;
+}
+.entry-related .grid-item {
+  display: grid;
+  grid-column-gap: 4%;
+  grid-row-gap: 2%;
+  grid-template-columns: 27% 65%;
+  grid-template-rows: 29% 29% 39%;
+}
+.entry-related .grid-item img{
+  grid-row: 1/4;
+  grid-column: 1/2;
+  align-self: stretch;
+  justify-self: stretch;
+}
+.entry-related .grid-item .entry-number{
+  grid-row: 1/2;
+  grid-column: 2/3;
+  font-weight: 700;
+  color: hsl(233, 8%, 79%);
+  font-size:  calc(1.05em + 1vw);
+  align-self: center;
+}
+.entry-related .grid-item .entry-title{
+  grid-row: 2/3;
+  grid-column: 2/3;
+  font-weight: 700;
+  color: hsl(240, 100%, 5%);
+  font-size:  calc(0.25em + 1vw);
+  align-self: center;
+}
+.entry-related .grid-item .entry-title:hover{
+  cursor: pointer;
+  color: hsl(5, 85%, 63%);
+}
+.entry-related .grid-item .entry-summary{
+  grid-row: 3/4;
+  grid-column: 2/3;
+  font-weight: 400;
+  color: hsl(236, 13%, 42%);
+  font-size:  calc(0.1em + 1vw);
+  line-height: 1.5;
+  align-self: center;
+}
+/* Resolucion para tablets  */
+@media (min-width: 645px) and (max-width: 1024px) {
+  .grid-container .entry-title {
+    font-size:  calc(2em + 1vw);
+  }
+}
+
+/* Resolucion para moviles */
+@media (max-width:645px) {
+  .home{
+    width: 100vh;
+    height: 300vw;
+  }
+  .home #page {
+    width: 92%;
+    height: 300%;
+    grid-template-rows: 4% 34% 33% 28%;
+    grid-template-columns: 100%;
+    padding: 2vw 4vh;
+    grid-column-gap: 0%;
+  }
+  /* Home page header */
+  .home .masthead{
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+  .masthead .logo {
+    align-self: center;
+  }
+  /* Menu hamburguesa */
+  .main-navigation {
+    display:none;
+    position: absolute;
+    top: -2vh;
+    left: 55%;
+    height: 300vw;
+    width: 127%;
+    grid-column: 1/3;
+    background-color: hsl(36, 100%, 99%);
+    font-size: calc(5em + 1vh);
+    grid-template-rows:repeat(5, 10%);
+    padding: 40% 5%;
+  }
+  .main-navigation .navigation-item {
+    justify-self: start;
+    align-self: center;
+    color: hsl(240, 100%, 5%);
+  }
+  .main-navigation .navigation-item:hover {
+    color: hsl(5, 85%, 63%);
+  }
+  .menu-toggle {
+      width: 40px;
+      height: 40px;
+      position: relative;
+      cursor: pointer;
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      justify-self: end;
+      align-self: center;
+      z-index: 10;
+  }
+  .menu-toggle span{
+      display: block;
+      width: 40px;
+      position: absolute;
+      top: 14px;
+      left:0;
+      height: 4px;
+      background-color: hsl(240, 100%, 5%);
+  }
+  .menu-toggle span::before,
+  .menu-toggle span::after{
+      content: '';
+      display: block;
+      width: 40px;
+      position: absolute;
+      height: 4px;
+      background-color: hsl(240, 100%, 5%);
+  }
+  .menu-toggle span::before{
+      bottom: 10px;
+  }
+  .menu-toggle span::after{
+      top: 10px;
+  }
+  .menu-toggle.active span {
+    background-color: transparent;
+  }
+  .menu-toggle.active span::before, .menu-toggle.active span::after {
+    top: 0;
+  }
+  .menu-toggle.active span:after {
+    transform: rotate(-45deg);
+  }
+  .menu-toggle.active span:before {
+    transform: rotate(45deg);
+  }
+  .grid-container {
+    grid-template-rows: 47% 22% 18% 7%;
+    grid-template-columns: 100%;
+    grid-row-gap: 2%;
+    margin-bottom: 10%;
+  }
+  .grid-container .entry-thumbnail {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .grid-container .entry-title {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-size:  calc(4em + 1vh);
+}
+  .grid-container .entry-summary {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    align-self: start;
+    font-size:  calc(1.4em + 1vh);
+    width: 100%;
+  }
+  .grid-container .entry-button {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    align-self: start;
+    justify-self: start;  
+    width: 49%;
+    font-size:  calc(1.3em + 1vh); 
+    letter-spacing: 7px;
+  }
+
+  /* Aside lateral */
+  .entry-new {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .entry-new .aside-title {
+    font-size:  calc(3em + 1vh);    
+  }
+  .entry-new .entry-title {
+    font-size:  calc(2.2em + 1vh);
+  }
+  .entry-new .entry-summary {
+    font-size:  calc(1.4em + 1vh);
+    line-height: 1.8;
+  }
+
+  /* Elementos relacionados */
+  .entry-related {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    grid-template-columns: 100%;
+    grid-row-gap: 10%;
+    margin-bottom: 10%;
+  }
+  .entry-related .grid-item {
+    grid-column: 1/3;
+  }
+  .entry-related .grid-item .entry-number{
+    font-size:  calc(3.5em + 1vh);
+  }
+  .entry-related .grid-item .entry-title{
+    font-size:  calc(1.5em + 1vh);
+  }
+  .entry-related .grid-item .entry-summary{
+    font-size:  calc(1.2em + 1vh);
+  }
+}
