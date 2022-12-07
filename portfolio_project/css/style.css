@@ -1,0 +1,313 @@
+/* Hoja de estilos principal */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Carga iconFont */
+@font-face {
+    font-family: 'proyectogrid';
+    src:  url('../fonts/proyectogrid.eot?iq7p93');
+    src:  url('../fonts/proyectogrid.eot?iq7p93#iefix') format('embedded-opentype'),
+      url('../fonts/proyectogrid.ttf?iq7p93') format('truetype'),
+      url('../fonts/proyectogrid.woff?iq7p93') format('woff'),
+      url('../fonts/proyectogrid.svg?iq7p93#proyectogrid') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'proyectogrid' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-pinterest-p:before {
+    content: "\e900";
+  }
+  .icon-facebook-square:before {
+    content: "\e901";
+  }
+  .icon-youtube:before {
+    content: "\e902";
+  }
+  .icon-instagram:before {
+    content: "\e903";
+  }
+  .icon-linkedin:before {
+    content: "\e904";
+  }
+  .icon-twitter:before {
+    content: "\e905";
+  }
+
+/* General styles */
+html {
+  font-size: 100%;
+}
+body {
+  background: #fdf0e8
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+.home #page {
+  display: grid;
+  grid-template-rows: 500px 1fr 100px;
+  grid-template-columns: 1fr;
+}
+/* Home page header */
+.home .masthead{
+  padding: 22px 15px 0;
+  display: grid;
+  grid-template-rows: 52px auto;
+  grid-template-columns: 233px auto;
+  grid-gap: 15px;
+  background-image: url(../img/pattern-home.svg);
+  background-size: cover;
+}
+.masthead .logo {
+  align-self: center;
+}
+/* Menu de navegacion */
+.main-navigation {
+  align-self: center;
+  justify-self: end;
+}
+.main-navigation .navigation-item {
+  display: inline-block;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  padding: 9px 30px;
+  margin: 10px;
+  border-radius: 999px;
+  font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.2;
+  background: transparent;
+  transition: all linear 0.15s;
+}
+.home .main-navigation .navigation-item {
+border: 2px solid #fff;
+color: #fff;
+}
+.home .main-navigation .navigation-item:hover {
+  color: #f09d85;
+  background: #fff;
+}
+.home .text-container {
+  grid-area: 2 / 1 / 3 / 3;
+  max-width: 720px;
+  align-self: center;
+  justify-self: center;
+  color: #fff;
+  text-align: center;
+}
+.home .text-container h1 {
+  font-size: 75px;
+  line-height: 1.25;
+  font-family: 'Quicksand', Verdana, Geneva, Tahoma, sans-serif;
+}
+.home .text-container p {
+  font-size: 22px;
+  line-height: 1.25;
+  font-family: 'Open sans', Verdana, Geneva, Tahoma, sans-serif;
+}
+/* Contenido del home */
+.home .grid-container{
+  display: grid;
+  padding: 30px 15px 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 14px;
+}
+.home .grid-container .load-more {
+  grid-column: 1 / 3;
+  width: 200px;
+  justify-self: center;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  padding: 9px 30px;
+  margin-top: 10px;
+  border-radius: 999px;
+  font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.2;
+  background: transparent;
+  transition: all linear 0.15s;
+}
+.home .grid-container .load-more {
+  border: 2px solid #f09d85;
+  color: #f09d85;
+}
+.home .grid-container .load-more:hover {
+  color: #f09d85;
+  background: #fff;
+}
+@media (min-width:645px) {
+  .home .grid-container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .home .grid-container .load-more {
+    grid-column: 1 / 4;
+  }
+}
+@media (min-width:1020px) {
+  .home .grid-container{
+    grid-gap: 34px;
+    padding: 30px 18px 40px;
+  }
+}
+@media (min-width:1030px) {
+  .home .grid-container{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .home .grid-container .load-more {
+    grid-column: 1 / 5;
+  }
+}
+@media (min-width:1338px) {
+  .home .grid-container{
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .home .grid-container .load-more {
+    grid-column: 1 / 6;
+  }
+}
+.grid-item {
+  font-size: 12px;
+  line-height: 1;
+  font-family: 'Open sans', Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #fff;
+}
+.grid-item .entry-title {
+  font-weight: 700;
+  color: #000;
+  padding: 10px 15px 4px;
+}
+.grid-item .entry-summary {
+  display: block;
+  color: #797979;
+  padding: 4px 15px 10px;
+}
+/* Footer */
+footer {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #fff;
+  padding: 10px;
+}
+footer .text-credit {
+  align-self: center;
+  justify-self: start;
+  color: #cfc9c9;
+}
+footer .social-container {
+  align-self: center;
+  justify-self: end;
+  display: flex;
+  color: #cfc9c9;
+}
+footer .social-container li {
+  margin: 5px;
+}
+/* Resolucion para moviles */
+@media (max-width:645px) {
+  .home .masthead{
+    padding: 15px 10px 0;
+    grid-gap: 5px;
+  }
+  .masthead .logo {
+    align-self: center;
+  }
+  /* Menu de navegacion */
+  .main-navigation {
+    align-self: center;
+    justify-self: end;
+  }
+  .main-navigation .navigation-item {
+    font-size: 12px;
+    padding: 2px 20px;
+    margin: 5px;
+  }
+  .home .text-container h1 {
+    font-size: 50px;
+  }
+  .home .text-container p {
+    font-size: 15px;
+  }
+  footer {
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  footer .text-credit {
+    align-self: end;
+    justify-self: center;
+  }
+  footer .social-container {
+    align-self: start;
+    justify-self: center;
+    display: flex;
+  }
+}
+.screen-reader-text {
+    position: absolute;
+    top: -9999em;
+    left: -9999em;
+}
